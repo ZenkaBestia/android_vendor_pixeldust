@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2019 The PixelDust Project
+# Copyright (C) 2018-2020 The PixelDust Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,3 +35,6 @@ $(foreach f,$(wildcard vendor/pixeldust/prebuilt/etc/init/*.rc),\
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
 TARGET_ENABLE_MEDIADRM_64 := true
 endif
+
+# Disable qmi EAP-SIM security
+DISABLE_EAP_PROXY := true
