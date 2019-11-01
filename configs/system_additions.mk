@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     ThemePicker \
+    PixeldustThemesStub \
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
