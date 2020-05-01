@@ -28,6 +28,11 @@ ART_BUILD_HOST_DEBUG := false
 # Dex pre-opt
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
+# Use 64-bit dex2oat for better dexopt time.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat64.enabled=true
+endif
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG := false
