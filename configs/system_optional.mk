@@ -17,3 +17,5 @@ PRODUCT_PACKAGES += \
     AwakeWallpaper \
     PixelDustWallpapers
 
+# Optional VolumePanel Plugins
+-include packages/apps/Plugins/plugins.mk
