@@ -21,6 +21,7 @@ PD_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXELDUST_VERSION).zip
 .PHONY: pixeldust
 pixeldust: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) mv $(INTERNAL_OTA_PACKAGE_TARGET) $(PD_TARGET_PACKAGE)
+	$(hide) $(MD5SUM) $(PD_TARGET_PACKAGE) > $(PD_TARGET_PACKAGE).md5sum
 	@echo ""
 	@echo -e ${CL_GRN}"  ██▓███  ██▒██   ██▓█████ ██▓   ▓█████▄ █    ██  ██████▄▄▄█████▓"${CL_RST}
 	@echo -e ${CL_GRN}" ▓██░  ██▓██▒▒ █ █ ▒▓█   ▀▓██▒   ▒██▀ ██▌██  ▓██▒██    ▒▓  ██▒ ▓▒"${CL_RST}
@@ -37,6 +38,7 @@ pixeldust: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo ""
 	@echo -e ${CL_CYN}"════════════════════════════════════════════════════════════════════════════════"${CL_RST}
 	@echo -e ${CL_CYN}"Package zip: "${CL_MAG} $(PIXELDUST_VERSION).zip                                 ${CL_RST}
+	@echo -e ${CL_CYN}"Package md5: "${CL_MAG}" `cat $(PD_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`    "${CL_RST}
 	@echo -e ${CL_CYN}"Package size:"${CL_MAG}" `ls -l $(PD_TARGET_PACKAGE) | cut -d ' ' -f 5`         "${CL_RST}
 	@echo -e ${CL_CYN}"Timestamp:   "${CL_MAG} $(BUILD_TIMESTAMP)                                       ${CL_RST}
 	@echo -e ${CL_CYN}"════════════════════════════════════════════════════════════════════════════════"${CL_RST}
