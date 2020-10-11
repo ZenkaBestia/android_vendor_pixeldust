@@ -25,4 +25,6 @@ PRODUCT_HOST_PACKAGES += \
     aapt2 \
     avbtool \
     brotli \
-    signapk
+    signapk \
+    brillo_update_payload
+
