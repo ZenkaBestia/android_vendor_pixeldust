@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     ThemePicker \
 
+# SystemUI plugins
+PRODUCT_PACKAGES += \
+    QuickAccessWallet \
+
 # Android Beam
 PRODUCT_COPY_FILES += \
     vendor/pixeldust/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
