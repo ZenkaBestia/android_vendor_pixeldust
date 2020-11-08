@@ -30,3 +30,8 @@ PRODUCT_COPY_FILES += \
 # Copy all init rc files
 $(foreach f,$(wildcard vendor/pixeldust/prebuilt/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
+# DRM
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
+TARGET_ENABLE_MEDIADRM_64 := true
+endif
