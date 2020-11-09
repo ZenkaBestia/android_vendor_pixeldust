@@ -32,6 +32,3 @@ PRODUCT_PACKAGES += \
     Stk \
     CellBroadcastReceiver
 
-# Copy APN list
-PRODUCT_COPY_FILES += \
-    vendor/pixeldust/prebuilt/etc/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
