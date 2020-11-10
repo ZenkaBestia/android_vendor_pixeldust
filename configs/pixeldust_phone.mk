@@ -17,10 +17,11 @@ include vendor/pixeldust/configs/audio.mk
 include vendor/pixeldust/configs/bootanimation.mk
 include vendor/pixeldust/configs/pixeldust_main.mk
 include vendor/pixeldust/configs/pixeldust_optimizations.mk
+include vendor/pixeldust/configs/pixeldust_properties.mk
 include vendor/pixeldust/configs/system_additions.mk
-include vendor/pixeldust/configs/version.mk
-include vendor/pixeldust/configs/ota.mk
 include vendor/pixeldust/configs/telephony.mk
+include vendor/pixeldust/configs/ota.mk
+include vendor/pixeldust/configs/version.mk
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 include vendor/pixeldust/config/ProductConfigQcom.mk
