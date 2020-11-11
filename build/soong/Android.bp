@@ -37,7 +37,7 @@ pixeldust_generator {
 }
 
 cc_library_headers {
-    name: "generated_kernel_headers",
+    name: "qti_kernel_headers",
     generated_headers: ["generated_kernel_includes"],
     export_generated_headers: ["generated_kernel_includes"],
     vendor_available: true,
