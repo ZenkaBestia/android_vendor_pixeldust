@@ -33,6 +33,17 @@ SOONG_CONFIG_pixeldustGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TAR
 SOONG_CONFIG_pixeldustGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_pixeldustGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
 
+SOONG_CONFIG_NAMESPACES += pixeldustQcomVars
+SOONG_CONFIG_pixeldustQcomVars += \
+
+# Only create soong_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
+ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
+SOONG_CONFIG_pixeldustQcomVars += \
+    qcom_soong_namespace
+
+SOONG_CONFIG_pixeldustQcomVars_qcom_soong_namespace := $(QCOM_SOONG_NAMESPACE)
+endif
+
 # Qualcomm variables
 SOONG_CONFIG_NAMESPACES += aosp_vs_qva
 SOONG_CONFIG_aosp_vs_qva += aosp_or_qva
