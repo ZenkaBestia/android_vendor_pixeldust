@@ -15,7 +15,7 @@
 # Pixel Dust ROM versioning
 PD_ROM_MAJ_VERSION := PixelDust-Eleven
 ANDROID_OS_VERSION := 11.0.0
-BUILD_VERSION_CODE := aosp
+BUILD_VERSION_CODE := caf
 
 ifndef SIGN_KEY
   PD_BUILDTYPE := UNOFFICIAL
