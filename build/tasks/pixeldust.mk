@@ -16,6 +16,8 @@
 # -----------------------------------------------------------------
 # Pixeldust OTA update package
 
+include vendor/pixeldust/build/tasks/colors.mk
+
 PD_TARGET_PACKAGE := $(PRODUCT_OUT)/$(PIXELDUST_VERSION).zip
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
