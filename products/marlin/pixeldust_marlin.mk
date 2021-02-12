@@ -38,12 +38,13 @@ include vendor/pixeldust/configs/pixeldust_phone.mk
 include vendor/pixeldust/configs/system_optional.mk
 
 # Google Apps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
 REMOVE_GAPPS_PACKAGES += \
-    LatinIMEGooglePrebuilt \
-    Photos \
     PrebuiltGmail \
-    NexusLauncherRelease
+    pixel_experience_2019_midyear \
+    pixel_experience_2019 \
+    pixel_experience_2020_midyear \
+    pixel_experience_2020
 
 # Setup device specific product configuration.
 PRODUCT_NAME := pixeldust_marlin
