@@ -55,6 +55,8 @@ REMOVE_GAPPS_PACKAGES += \
     GoogleFeedback \
     GoogleTTS \
     Maps \
+    NetworkPermissionConfigGoogle \
+    NetworkStackGoogle \
     NgaResources \
     PixelLiveWallpaperPrebuilt \
     pixel_experience_2019_midyear \
