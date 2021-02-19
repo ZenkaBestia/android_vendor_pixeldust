@@ -66,6 +66,12 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     ThemePicker \
     PixeldustThemesStub \
+    QuickAccessWallet \
+
+# Devices should opt-in to include PixelDustLauncher
+ifneq ($(filter blueline bonito bramble coral crosshatch redfin sunfish taimen,$(TARGET_DEVICE)),)
+FORCE_BUILD_LAUNCHER3 := true
+endif
 
 ifeq ($(FORCE_BUILD_LAUNCHER3), true)
 REMOVE_GAPPS_PACKAGES += \
@@ -73,12 +79,6 @@ REMOVE_GAPPS_PACKAGES += \
 else 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/pixeldust/overlay-nexuslauncher
-endif
-
-# Pixel specific
-ifneq ($(filter blueline bonito bramble coral crosshatch redfin sunfish taimen,$(TARGET_DEVICE)),)
-PRODUCT_PACKAGES += \
-    QuickAccessWallet
 endif
 
 # Android Beam
