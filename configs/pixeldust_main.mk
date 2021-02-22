@@ -23,8 +23,7 @@ PRODUCT_PACKAGES += \
 
 # Include needed privapp permissions whitelist
 PRODUCT_COPY_FILES += \
-    vendor/pixeldust/prebuilt/etc/privapp-permissions/pixeldust-permissions.xml:system/etc/permissions/pixeldust-permissions.xml \
-    vendor/pixeldust/prebuilt/etc/privapp-permissions/pixeldust-permissions.xml:system_ext/etc/permissions/pixeldust-permissions.xml \
+    vendor/pixeldust/prebuilt/etc/privapp-permissions/pixeldust-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/pixeldust-permissions.xml \
     vendor/pixeldust/prebuilt/etc/privapp-permissions/pixeldust-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/pixeldust-permissions.xml
 
 # Copy all init rc files
