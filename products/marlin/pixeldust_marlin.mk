@@ -40,6 +40,10 @@ include vendor/pixeldust/configs/system_optional.mk
 # Pixel 1 prebuilts
 $(call inherit-product-if-exists, vendor/sailin/pixel1-prebuilts.mk)
 
+# Google Apps
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+include vendor/pixeldust/configs/core_gapps.mk
+
 # Setup device specific product configuration.
 PRODUCT_NAME := pixeldust_marlin
 PRODUCT_PROPERTY_OVERRIDES += \
