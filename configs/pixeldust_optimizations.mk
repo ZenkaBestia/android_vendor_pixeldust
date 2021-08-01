@@ -15,6 +15,9 @@
 # Turn off the error checks and allow PATH tool to be used
 TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
+# Disable artifact path requirements
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
 # Disable ADB authentication
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 
