@@ -25,6 +25,10 @@ include vendor/pixeldust/configs/ota.mk
 include vendor/pixeldust/configs/pixel_apns.mk
 include vendor/pixeldust/configs/telephony.mk
 
+ifeq ($(BUILD_VERSION_CODE),caf)
+include vendor/pixeldust/configs/system_caf.mk
+endif
+
 ifndef TARGET_EXCLUDE_GOOGLE_APEX
   TARGET_EXCLUDE_GOOGLE_APEX := false
 endif
